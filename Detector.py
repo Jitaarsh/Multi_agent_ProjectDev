@@ -60,8 +60,3 @@ def detect(requirement: str) ->dict:
         end = raw.rfind("}") + 1
         return json.loads(raw[start:end])
 
-# test it
-if __name__ == "__main__":
-    req = " i want to create a website for a company which makes custom designee on the user demand, i want user authentication, a studio on which users can come upload there image and see how it looks on different t-shirts and user also would be able to order it as well as install the jpg of how there logo is looking on that t-shirt, admin site where admin would be able to see everything all the orders"
-    result = detect(req)
-    print(json.dumps(result, indent=2))
